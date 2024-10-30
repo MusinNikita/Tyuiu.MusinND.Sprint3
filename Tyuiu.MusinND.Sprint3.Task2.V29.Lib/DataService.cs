@@ -16,7 +16,7 @@ namespace Tyuiu.MusinND.Sprint3.Task2.V29.Lib
                 k++;
             } while (k <= stopValue); 
 
-            return Math.Round(sum, 2);
+            return Math.Round(sum, 3);
         }
     }
 }
