@@ -8,12 +8,15 @@ namespace Tyuiu.MusinND.Sprint3.Task2.V29.Lib
         {
             double sum = 0;
 
-            for (int k = startValue; k <= stopValue; k++)
+            int k = startValue;
+
+            do
             {
                 sum += (Math.Pow(value, k) + 0.25) * Math.Cos(k);
-            }
+                k++;
+            } while (k <= stopValue); 
 
-            return Math.Round(sum, 3);
+            return Math.Round(sum, 2);
         }
     }
 }
