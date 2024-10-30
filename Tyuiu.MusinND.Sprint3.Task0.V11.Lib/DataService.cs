@@ -13,7 +13,7 @@ namespace Tyuiu.MusinND.Sprint3.Task0.V11.Lib
                 sum += Math.Pow(1.0 / Math.Pow(value, k), 2);
             }
 
-            return Math.Round(sum, 2);
+            return Math.Round(sum, 3);
         }
     }
 }
