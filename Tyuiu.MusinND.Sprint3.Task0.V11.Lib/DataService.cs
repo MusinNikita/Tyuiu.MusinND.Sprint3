@@ -2,15 +2,19 @@
 
 namespace Tyuiu.MusinND.Sprint3.Task0.V11.Lib
 {
-    public double GetSumSeries(int value, int startValue, int stopValue)
+    public class DataService : ISprint3Task0V11
     {
-        double sum = 0;
-
-        for (int k = startValue; k <= stopValue; k++)
+        public double GetSumSeries(int value, int startValue, int stopValue)
         {
-            sum += Math.Pow(1.0 / (value * k), 2);
+            double sum = 0;
+
+            for (int k = startValue; k <= stopValue; k++)
+            {
+                sum += Math.Pow(1.0 / (value * k), 2);
+            }
+
+            return sum;
         }
 
-        return sum;
     }
 }
