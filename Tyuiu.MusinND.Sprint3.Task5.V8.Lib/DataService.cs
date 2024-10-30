@@ -8,24 +8,23 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
         {
             double totalSum = 0; // Переменная для хранения общей суммы
 
-            // Внешний цикл для i от 1 до 3
-            for (int i = startValue1; i <= stopValue1; i++)
+            // Внутренний цикл для k от 1 до 12
+            for (int k = startValue2; k <= stopValue2; k++)
             {
-                // Внутренний цикл для k от 1 до 12
-                for (int k = startValue2; k <= stopValue2; k++)
+                // Проверяем, чтобы избежать деления на ноль
+                if (Math.Sin(k) == 0)
                 {
-                    // Проверяем, чтобы избежать деления на ноль
-                    if (Math.Sin(k) == 0)
-                    {
-                        continue; // Пропускаем k, если синус равен нулю
-                    }
-
-                    totalSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
+                    continue; // Пропускаем k, если синус равен нулю
                 }
+
+                totalSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
             }
 
+            // Умножаем на количество итераций внешнего цикла (в данном случае 3)
+            totalSum *= (stopValue1 - startValue1 + 1);
+
             // Возвращаем общую сумму и добавляем 3
-            return Math.Round((totalSum + 3),3);
+            return Math.Round((totalSum + 3), 3);
         }
     }
 }
