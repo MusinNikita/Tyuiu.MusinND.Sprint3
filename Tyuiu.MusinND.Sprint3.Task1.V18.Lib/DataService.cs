@@ -15,7 +15,7 @@ namespace Tyuiu.MusinND.Sprint3.Task1.V18.Lib
 
             sum *= Math.Pow(1.0 / 4.0, 2);
 
-            return Math.Round(sum, 2);
+            return Math.Round(sum, 3);
         }
     }
 }
