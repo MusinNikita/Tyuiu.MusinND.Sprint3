@@ -10,10 +10,10 @@ namespace Tyuiu.MusinND.Sprint3.Task0.V11.Lib
 
             for (int k = startValue; k <= stopValue; k++)
             {
-                sum += Math.Pow(1.0 / Math.Pow(value, k), 2); // (1 / n^k)^2 = 1 / (n^(2k))
+                sum += Math.Pow(1.0 / Math.Pow(value, k), 2);
             }
 
-            return sum;
+            return Math.Round(sum, 2);
         }
     }
 }
