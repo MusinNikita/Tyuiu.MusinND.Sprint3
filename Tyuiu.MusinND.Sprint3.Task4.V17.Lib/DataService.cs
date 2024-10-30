@@ -24,7 +24,7 @@ namespace Tyuiu.MusinND.Sprint3.Task4.V17.Lib
                 product *= y;
             }
 
-            return product; // Возвращаем итоговое произведение
+            return Math.Round(product, 3); // Возвращаем итоговое произведение
         }
     }
 }
