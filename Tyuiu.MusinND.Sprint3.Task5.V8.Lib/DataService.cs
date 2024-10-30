@@ -1,6 +1,4 @@
-﻿using System;
-using tyuiu.cources.programming.interfaces.Sprint3;
-using Tyuiu.Cources.Programming.Interfaces.Sprint3;
+﻿using tyuiu.cources.programming.interfaces.Sprint3;
 
 namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
 {
