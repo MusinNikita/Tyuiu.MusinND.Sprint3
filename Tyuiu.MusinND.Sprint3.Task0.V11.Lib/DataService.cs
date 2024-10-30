@@ -8,14 +8,9 @@ namespace Tyuiu.MusinND.Sprint3.Task0.V11.Lib
         {
             double sum = 0;
 
-            if (value <= 0 || startValue <= 0 || stopValue < startValue)
-            {
-                throw new ArgumentException("Некорректные входные данные.");
-            }
-
             for (int k = startValue; k <= stopValue; k++)
             {
-                sum += Math.Pow(1.0 / (value * k), 2);
+                sum += Math.Pow(1.0 / Math.Pow(value, k), 2); // (1 / n^k)^2 = 1 / (n^(2k))
             }
 
             return sum;
