@@ -13,7 +13,7 @@ namespace Tyuiu.MusinND.Sprint3.Task2.V29.Lib
                 sum += (Math.Pow(value, k) + 0.25) * Math.Cos(k);
             }
 
-            return Math.Round(sum, 2);
+            return Math.Round(sum, 3);
         }
     }
 }
