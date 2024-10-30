@@ -21,10 +21,13 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
             }
 
             // Умножаем на количество итераций внешнего цикла (в данном случае 3)
-            totalSum *= (stopValue1 - startValue1 + 1);
+            totalSum *= (stopValue1 - startValue1 + 1); // Это 3, т.к. 3 - 1 + 1 = 3
+
+            //Прибавляем + 3
+            double finalySum = totalSum + 3;
 
             // Возвращаем общую сумму и добавляем 3
-            return Math.Round((totalSum + 3), 3);
+            return Math.Round(finalySum, 3);
         }
     }
 }
