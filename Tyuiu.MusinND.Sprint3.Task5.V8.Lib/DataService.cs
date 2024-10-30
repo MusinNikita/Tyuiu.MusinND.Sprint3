@@ -1,4 +1,6 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint3;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint3;
+using Tyuiu.Cources.Programming.Interfaces.Sprint3;
 
 namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
 {
@@ -6,28 +8,24 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
     {
         public double GetSumSumSeries(int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
-            double totalSum = 0; // Переменная для хранения общей суммы
+            double totalSum = 0.0;
 
-            // Внутренний цикл для k от 1 до 12
-            for (int k = startValue2; k <= stopValue2; k++)
+            // Внешний цикл для i от startValue1 до stopValue1 (от 1 до 12)
+            for (int i = startValue1; i <= stopValue1; i++)
             {
-                // Проверяем, чтобы избежать деления на ноль
-                if (Math.Sin(k) == 0)
+                double innerSum = 0.0;
+
+                // Внутренний цикл для k от startValue2 до stopValue2 (от 1 до 12)
+                for (int k = startValue2; k <= stopValue2; k++)
                 {
-                    continue; // Пропускаем k, если синус равен нулю
+                    innerSum += 1.0 / Math.Sin(k); // Рассчитываем внутреннюю сумму
                 }
 
-                totalSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
+                totalSum += innerSum; // Добавляем внутреннюю сумму к общей сумме
             }
 
-            // Умножаем на количество итераций внешнего цикла (в данном случае 3)
-            totalSum *= (stopValue1 - startValue1 + 1); // Это 3, т.к. 3 - 1 + 1 = 3
-
-            //Прибавляем + 3
-            double finalySum = totalSum + 3;
-
-            // Возвращаем общую сумму и добавляем 3
-            return Math.Round(finalySum, 3);
+            // Добавляем 3 к итоговому результату
+            return totalSum + 3;
         }
     }
 }
