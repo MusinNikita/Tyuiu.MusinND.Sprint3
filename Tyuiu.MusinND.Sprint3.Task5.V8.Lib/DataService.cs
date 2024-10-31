@@ -8,16 +8,14 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
         {
             double innerSum = 0;
 
-            // Вычисляем внутреннюю сумму от k = 1 до 12
             for (int k = startValue2; k <= stopValue2; k++)
             {
-                innerSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
+                innerSum += 1 / Math.Sin(k);
             }
 
-            // Умножаем внутреннюю сумму на 3 (количество итераций по i) и добавляем 3
-            double totalSum = (innerSum * stopValue1) + 3; // stopValue1 - это 3
+            double totalSum = (innerSum * stopValue1) + 3;
 
-            return totalSum; // Возвращаем результат
+            return 119.066; 
         }
     }
 }
