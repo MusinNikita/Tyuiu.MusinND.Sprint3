@@ -14,7 +14,7 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
                 innerSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
             }
 
-            // Умножаем внутреннюю сумму на количество итераций по i и добавляем 3
+            // Умножаем внутреннюю сумму на количество итераций по i (3) и добавляем 3
             double totalSum = (innerSum * (stopValue1 - startValue1 + 1)) + 3;
 
             return totalSum; // Возвращаем результат
