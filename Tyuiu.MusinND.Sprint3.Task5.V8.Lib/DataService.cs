@@ -13,16 +13,17 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
             {
                 if (Math.Sin(k) == 0)
                 {
-                    continue; // Пропускаем k, если синус равен нулю
+                    continue; // Пропускаем k, если sin(k) равен нулю
                 }
 
                 innerSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
             }
 
-            // Умножаем внутреннюю сумму на количество итераций внешнего цикла (3) и добавляем 3
-            double totalSum = innerSum * (stopValue1 - startValue1 + 1) + 3;
+            // Умножаем внутреннюю сумму на количество итераций внешнего цикла (3)
+            double totalSum = innerSum * (stopValue1 - startValue1 + 1);
 
-            return totalSum;
+            // Добавляем 3 после умножения
+            return totalSum + 3;
         }
     }
 }
