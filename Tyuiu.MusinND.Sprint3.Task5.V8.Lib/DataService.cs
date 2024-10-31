@@ -6,29 +6,26 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
     {
         public double GetSumSumSeries(int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
-            double innerSum = 0;
-
             // Внутренняя сумма по k от startValue2 до stopValue2
             for (int k = startValue2; k <= stopValue2; k++)
             {
-                // Переводим k в радианы
-                double radians = k * Math.PI / 180;
-                // Проверяем, что синус не равен 0, чтобы избежать деления на 0
-                if (Math.Sin(radians) != 0)
+                double totalSum = 0;
+
+                // Внешний цикл от 1 до 3
+                for (int i = 1; i <= 3; i++)
                 {
-                    innerSum += 1 / Math.Sin(radians);
+                    // Внутренний цикл от 1 до 12
+                    for (int k = 1; k <= 12; k++)
+                    {
+                        // Добавляем 1/sin(k) к общей сумме
+                        totalSum += 1 / Math.Sin(k);
+                    }
                 }
-                else
-                {
-                    // Если синус равен 0, добавляем очень большое число (или можно просто пропустить)
-                    innerSum += double.MaxValue; // или просто продолжить
-                }
+
+                // Добавляем 3 к общей сумме
+                totalSum += 3;
+
+                return totalSum;
             }
-
-            // Умножаем внутреннюю сумму на startValue1 (количество итераций)
-            double result = startValue1 * innerSum + 3;
-
-            return result;
-        }
     }
 }
