@@ -6,18 +6,25 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
     {
         public double GetSumSumSeries(int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
-            double totalSum = 0.0;
+            double totalSum = 0; // Переменная для хранения общей суммы
 
-            // Один цикл для k от startValue2 до stopValue2 (от 1 до 12)
+            // Внутренний цикл для k от 1 до 12
             for (int k = startValue2; k <= stopValue2; k++)
             {
-                totalSum += 1.0 / Math.Sin(k); // Рассчитываем сумму
+                // Проверяем, чтобы избежать деления на ноль
+                if (Math.Sin(k) == 0)
+                {
+                    continue; // Пропускаем k, если синус равен нулю
+                }
+
+                totalSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
             }
 
-            // Умножаем на количество итераций внешнего цикла и добавляем 3
-            return (totalSum * (stopValue1 - startValue1 + 1)) + 3;
-        }
+            // Умножаем на количество итераций внешнего цикла (в данном случае 3)
+            totalSum *= (stopValue1 - startValue1 + 1); // Это 3, т.к. 3 - 1 + 1 = 3
 
+            // Возвращаем общую сумму и добавляем 3
+            return totalSum + 3;
+        }
     }
-}
 }
