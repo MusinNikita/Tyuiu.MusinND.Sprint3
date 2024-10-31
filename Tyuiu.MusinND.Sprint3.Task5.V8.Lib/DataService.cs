@@ -17,7 +17,7 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
             }
 
             // Внешняя сумма умножает внутреннюю на 3, затем добавляем 3
-            result = 3 * result + 3;
+            result = result + 3;
             return result;
         }
     }
