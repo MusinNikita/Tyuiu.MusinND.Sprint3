@@ -14,7 +14,7 @@ namespace Tyuiu.MusinND.Sprint3.Task7.V26.Lib
             for (int i = 0; i < size; i++)
             {
                 double x = startValue + i; // вычисляем текущее значение x
-                results[i] = CalculateF(x);
+                results[i] = Math.Round(CalculateF(x), 2); // Округляем до 2 знаков после запятой
             }
 
             return results;
