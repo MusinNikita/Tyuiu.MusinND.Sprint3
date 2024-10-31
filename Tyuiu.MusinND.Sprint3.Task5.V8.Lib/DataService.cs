@@ -8,7 +8,7 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
         {
             double innerSum = 0;
 
-            // Внутренний цикл от startValue2 до stopValue2 (1 до 12)
+            // Вычисляем внутреннюю сумму от k = 1 до 12
             for (int k = startValue2; k <= stopValue2; k++)
             {
                 innerSum += 1 / Math.Sin(k); // Суммируем 1/sin(k)
