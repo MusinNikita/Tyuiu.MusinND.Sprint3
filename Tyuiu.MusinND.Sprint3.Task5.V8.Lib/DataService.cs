@@ -15,7 +15,7 @@ namespace Tyuiu.MusinND.Sprint3.Task5.V8.Lib
             }
 
             // Умножаем внутреннюю сумму на 3 (количество итераций по i) и добавляем 3
-            double totalSum = (innerSum * (stopValue1 - startValue1 + 1)) + 3; // 3 итерации по i
+            double totalSum = (innerSum * stopValue1) + 3; // stopValue1 - это 3
 
             return totalSum; // Возвращаем результат
         }
